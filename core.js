@@ -1,5 +1,5 @@
 const data = document.getElementsByTagName('body')[0].innerHTML;
-fetch('https://transifex-302222.appspot.com/auth/html/translate', {
+fetch('https://transify.herokuapp.com/auth/html/translate', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
