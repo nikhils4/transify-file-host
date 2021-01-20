@@ -4,9 +4,9 @@ fetch('https://transifex-302222.appspot.com/auth/html/translate', {
     headers: {
         'Content-Type': 'application/json'
     },
-    body: {
+    body: JSON.stringify({
         html: data
-    }
+    })
 })
 .then((res) => res.json()) 
 .then(res => {
