@@ -1,4 +1,4 @@
-const data = document.getElementsByTagName('body').innerHTML;
+const data = document.getElementsByTagName('body')[0].innerHTML;
 fetch('https://transifex-302222.appspot.com/auth/html/translate', {
     method: 'POST',
     headers: {
@@ -10,7 +10,7 @@ fetch('https://transifex-302222.appspot.com/auth/html/translate', {
 })
 .then((res) => res.json()) 
 .then(res => {
-    document.getElementsByTagName('body').innerHTML = res.message
+    document.getElementsByTagName('body')[0].innerHTML = res.message
     console.log('Translated!')
 })
 .catch(err => {
